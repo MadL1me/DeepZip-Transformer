@@ -24,7 +24,7 @@ from keras.layers import Dense
 from keras.layers import LSTM, Flatten, CuDNNLSTM
 from keras.layers.embeddings import Embedding
 from keras.models import load_model
-from keras.layers.normalization import BatchNormalization
+from keras.layers import BatchNormalization
 import tensorflow as tf
 import numpy as np
 import argparse
@@ -74,6 +74,22 @@ def create_data(rows, p=0.5):
 
 def predict_lstm(len_series, timesteps, bs, alphabet_size, model_name, final_step=False):
         model = getattr(models, model_name)(bs, timesteps, alphabet_size)
+        num_iters = int((len_series) / bs)
+        series_2d = np.zeros((bs, num_iters), dtype=np.uint8)
+        f = [open(args.temp_file_prefix + '.' + str(i), 'rb') for i in range(bs)]
+        bitin = [arithmeticcoding_fast.BitInputStream(f[i]) for i in range(bs)]
+        dec = [arithmeticcoding_fast.ArithmeticDecoder(32, bitin[i]) for i in range(bs)]
+        prob = np.ones(alphabet_size) / alphabet_size
+        cumul = np.zeros(alphabet_size + 1, dtype=np.uint64)
+        cumul[1:] = np.cumsum(prob * 10000000 + 1)
+        for i in range(bs):
+            for j in range(min(num_iters, timesteps)):
+                series_2d[i, j] = dec[i].read(cumul, alphabet_size)
+        cumul = np.zeros((bs, alphabet_size + 1), dtype=np.uint64)
+        for j in (range(num_iters - timesteps)):
+            prob = model.predict(series_2d[:, j:j + timesteps], batch_size=bs)
+            break
+        
         model.load_weights(args.model_weights_file)
         
         if not final_step:
@@ -140,7 +156,7 @@ def var_int_decode(f):
 def main():
         args.temp_dir = tempfile.mkdtemp()
         args.temp_file_prefix = args.temp_dir + "/compressed"
-        tf.set_random_seed(42)
+        tf.random.set_seed(42)
         np.random.seed(0)
         f = open(args.input_file_prefix+'.params','r')
         param_dict = json.loads(f.read())

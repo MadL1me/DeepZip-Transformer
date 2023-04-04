@@ -1,2 +1,2009 @@
 Starting training ...
 Starting Compression ...
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.42
+	System time (seconds): 0.81
+	Percent of CPU this job got: 333%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 81448
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17858
+	Voluntary context switches: 43
+	Involuntary context switches: 55
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.47
+	System time (seconds): 0.76
+	Percent of CPU this job got: 336%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 81444
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18023
+	Voluntary context switches: 48
+	Involuntary context switches: 44
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+/usr/bin/time: cannot run python: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1124
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 26
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+/usr/bin/time: cannot run python: No such file or directory
+Command exited with non-zero status 127
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: ?%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1060
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.44
+	System time (seconds): 0.78
+	Percent of CPU this job got: 338%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 81416
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17873
+	Voluntary context switches: 54
+	Involuntary context switches: 35
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.44
+	System time (seconds): 0.79
+	Percent of CPU this job got: 336%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 81328
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18013
+	Voluntary context switches: 54
+	Involuntary context switches: 35
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.47
+	System time (seconds): 0.78
+	Percent of CPU this job got: 328%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80416
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17856
+	Voluntary context switches: 42
+	Involuntary context switches: 32
+	Swaps: 0
+	File system inputs: 24
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.47
+	System time (seconds): 0.79
+	Percent of CPU this job got: 314%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.72
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80528
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18002
+	Voluntary context switches: 50
+	Involuntary context switches: 46
+	Swaps: 0
+	File system inputs: 24
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.55
+	System time (seconds): 0.67
+	Percent of CPU this job got: 340%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80484
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17867
+	Voluntary context switches: 42
+	Involuntary context switches: 35
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.48
+	System time (seconds): 0.73
+	Percent of CPU this job got: 341%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80980
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18018
+	Voluntary context switches: 47
+	Involuntary context switches: 38
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.47
+	System time (seconds): 0.76
+	Percent of CPU this job got: 331%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80424
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17903
+	Voluntary context switches: 49
+	Involuntary context switches: 40
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.40
+	System time (seconds): 0.80
+	Percent of CPU this job got: 343%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.64
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80468
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17989
+	Voluntary context switches: 46
+	Involuntary context switches: 37
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.48
+	System time (seconds): 0.75
+	Percent of CPU this job got: 333%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80592
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17913
+	Voluntary context switches: 50
+	Involuntary context switches: 38
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.51
+	System time (seconds): 0.74
+	Percent of CPU this job got: 324%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 81024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18001
+	Voluntary context switches: 39
+	Involuntary context switches: 44
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.44
+	System time (seconds): 0.77
+	Percent of CPU this job got: 340%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80648
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17861
+	Voluntary context switches: 57
+	Involuntary context switches: 40
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.48
+	System time (seconds): 0.75
+	Percent of CPU this job got: 331%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80636
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18017
+	Voluntary context switches: 38
+	Involuntary context switches: 38
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.49
+	System time (seconds): 0.76
+	Percent of CPU this job got: 323%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80524
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17869
+	Voluntary context switches: 43
+	Involuntary context switches: 43
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.39
+	System time (seconds): 0.85
+	Percent of CPU this job got: 331%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18016
+	Voluntary context switches: 39
+	Involuntary context switches: 37
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.46
+	System time (seconds): 0.78
+	Percent of CPU this job got: 336%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80556
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17877
+	Voluntary context switches: 46
+	Involuntary context switches: 44
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 3, in <module>
+    from . import utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/__init__.py", line 6, in <module>
+    from . import conv_utils
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/utils/conv_utils.py", line 9, in <module>
+    from .. import backend as K
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/__init__.py", line 89, in <module>
+    from .tensorflow_backend import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 5, in <module>
+    import tensorflow as tf
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 24, in <module>
+    from tensorflow.python import pywrap_tensorflow  # pylint: disable=unused-import
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 74, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow.py", line 58, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 28, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/pywrap_tensorflow_internal.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow_internal', fp, pathname, description)
+  File "/usr/lib/python3.6/imp.py", line 243, in load_module
+    return load_dynamic(name, filename, file)
+  File "/usr/lib/python3.6/imp.py", line 343, in load_dynamic
+    return _load(spec)
+ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 1.45
+	System time (seconds): 0.77
+	Percent of CPU this job got: 339%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 80528
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 17978
+	Voluntary context switches: 49
+	Involuntary context switches: 46
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Traceback (most recent call last):
+  File "compressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 21, in <module>
+    from tensorflow.python import tf2
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 41, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python.feature_column import feature_column_lib as feature_column
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/feature_column/feature_column_lib.py", line 22, in <module>
+    from tensorflow.python.feature_column.feature_column import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/feature_column/feature_column.py", line 147, in <module>
+    from tensorflow.python.layers import base
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/layers/base.py", line 20, in <module>
+    from tensorflow.python.keras.legacy_tf_layers import base
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/__init__.py", line 25, in <module>
+    from tensorflow.python.keras import models
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/models/__init__.py", line 21, in <module>
+    from tensorflow.python.keras._impl.keras.models import load_model
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/__init__.py", line 21, in <module>
+    from tensorflow.python.keras._impl.keras import activations
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/activations.py", line 24, in <module>
+    from tensorflow.python.keras._impl.keras.utils.generic_utils import deserialize_keras_object
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/utils/__init__.py", line 34, in <module>
+    from tensorflow.python.keras._impl.keras.utils.multi_gpu_utils import multi_gpu_model
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/utils/multi_gpu_utils.py", line 22, in <module>
+    from tensorflow.python.keras._impl.keras.engine.training import Model
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/engine/__init__.py", line 21, in <module>
+    from tensorflow.python.keras._impl.keras.engine.base_layer import InputSpec
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/engine/base_layer.py", line 41, in <module>
+    InputSpec = tf_base_layers.InputSpec
+AttributeError: module 'tensorflow.python.layers.base' has no attribute 'InputSpec'
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 2.37
+	System time (seconds): 0.91
+	Percent of CPU this job got: 191%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 286516
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 39589
+	Voluntary context switches: 43
+	Involuntary context switches: 41
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 20, in <module>
+    import keras
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/keras/__init__.py", line 21, in <module>
+    from tensorflow.python import tf2
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/__init__.py", line 41, in <module>
+    from tensorflow.python.tools import module_util as _module_util
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/__init__.py", line 49, in <module>
+    from tensorflow.python.feature_column import feature_column_lib as feature_column
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/feature_column/feature_column_lib.py", line 22, in <module>
+    from tensorflow.python.feature_column.feature_column import *
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/feature_column/feature_column.py", line 147, in <module>
+    from tensorflow.python.layers import base
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/layers/base.py", line 20, in <module>
+    from tensorflow.python.keras.legacy_tf_layers import base
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/__init__.py", line 25, in <module>
+    from tensorflow.python.keras import models
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/models/__init__.py", line 21, in <module>
+    from tensorflow.python.keras._impl.keras.models import load_model
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/__init__.py", line 21, in <module>
+    from tensorflow.python.keras._impl.keras import activations
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/activations.py", line 24, in <module>
+    from tensorflow.python.keras._impl.keras.utils.generic_utils import deserialize_keras_object
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/utils/__init__.py", line 34, in <module>
+    from tensorflow.python.keras._impl.keras.utils.multi_gpu_utils import multi_gpu_model
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/utils/multi_gpu_utils.py", line 22, in <module>
+    from tensorflow.python.keras._impl.keras.engine.training import Model
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/engine/__init__.py", line 21, in <module>
+    from tensorflow.python.keras._impl.keras.engine.base_layer import InputSpec
+  File "/root/DeepZip/tf/lib/python3.6/site-packages/tensorflow/python/keras/_impl/keras/engine/base_layer.py", line 41, in <module>
+    InputSpec = tf_base_layers.InputSpec
+AttributeError: module 'tensorflow.python.layers.base' has no attribute 'InputSpec'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 2.28
+	System time (seconds): 0.88
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.63
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 286180
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 39455
+	Voluntary context switches: 44
+	Involuntary context switches: 26813
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Traceback (most recent call last):
+  File "compressor.py", line 202, in <module>
+    main()
+  File "compressor.py", line 164, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.load_weights(args.model_weights_file)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/network.py", line 1152, in load_weights
+    with h5py.File(filepath, mode='r') as f:
+  File "/opt/conda/lib/python3.6/site-packages/h5py/_hl/files.py", line 408, in __init__
+    swmr=swmr)
+  File "/opt/conda/lib/python3.6/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '../data/trained_models/xor40/biLSTM.hdf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 8.07
+	System time (seconds): 1.21
+	Percent of CPU this job got: 108%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.53
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 878996
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 165663
+	Voluntary context switches: 47
+	Involuntary context switches: 13961
+	Swaps: 0
+	File system inputs: 160
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Traceback (most recent call last):
+  File "decompressor.py", line 184, in <module>
+    main()
+  File "decompressor.py", line 153, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/biLSTM.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 2.52
+	System time (seconds): 0.64
+	Percent of CPU this job got: 132%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.38
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 236804
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 48999
+	Voluntary context switches: 42
+	Involuntary context switches: 26
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Traceback (most recent call last):
+  File "compressor.py", line 202, in <module>
+    main()
+  File "compressor.py", line 164, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.load_weights(args.model_weights_file)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/network.py", line 1152, in load_weights
+    with h5py.File(filepath, mode='r') as f:
+  File "/opt/conda/lib/python3.6/site-packages/h5py/_hl/files.py", line 408, in __init__
+    swmr=swmr)
+  File "/opt/conda/lib/python3.6/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '../data/trained_models/xor40/biLSTM.hdf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 8.10
+	System time (seconds): 1.24
+	Percent of CPU this job got: 109%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.56
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 878560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 165177
+	Voluntary context switches: 52
+	Involuntary context switches: 40
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Traceback (most recent call last):
+  File "decompressor.py", line 184, in <module>
+    main()
+  File "decompressor.py", line 153, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/biLSTM.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 2.48
+	System time (seconds): 0.64
+	Percent of CPU this job got: 133%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 236940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 48957
+	Voluntary context switches: 42
+	Involuntary context switches: 28
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Traceback (most recent call last):
+  File "compressor.py", line 202, in <module>
+    main()
+  File "compressor.py", line 164, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.load_weights(args.model_weights_file)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/network.py", line 1152, in load_weights
+    with h5py.File(filepath, mode='r') as f:
+  File "/opt/conda/lib/python3.6/site-packages/h5py/_hl/files.py", line 408, in __init__
+    swmr=swmr)
+  File "/opt/conda/lib/python3.6/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = '../data/trained_models/xor40/biLSTM.hdf5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 8.06
+	System time (seconds): 1.14
+	Percent of CPU this job got: 108%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 878700
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 165868
+	Voluntary context switches: 57
+	Involuntary context switches: 18046
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Traceback (most recent call last):
+  File "decompressor.py", line 184, in <module>
+    main()
+  File "decompressor.py", line 153, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/biLSTM.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 2.45
+	System time (seconds): 0.65
+	Percent of CPU this job got: 133%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 236140
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 48961
+	Voluntary context switches: 41
+	Involuntary context switches: 29
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting training ...
+0;1.000037736634152
+1;1.0000313962346965
+2;1.0000342915178804
+3;1.0000311291605077
+Starting Compression ...
+2023-03-04 16:56:00.655285: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-04 16:56:00.785220: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-04 16:56:00.785900: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: NVIDIA GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.759
+pciBusID: 0000:00:06.0
+totalMemory: 7.93GiB freeMemory: 7.82GiB
+2023-03-04 16:56:00.785935: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2023-03-04 16:56:01.116953: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-03-04 16:56:01.117035: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2023-03-04 16:56:01.117048: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2023-03-04 16:56:01.117199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7558 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1)
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -output ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 303.18
+	System time (seconds): 19.80
+	Percent of CPU this job got: 105%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:05.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1857660
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 439818
+	Voluntary context switches: 784847
+	Involuntary context switches: 849
+	Swaps: 0
+	File system inputs: 24
+	File system outputs: 10472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2023-03-04 17:01:05.400728: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-04 17:01:05.532398: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-04 17:01:05.533077: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: NVIDIA GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.759
+pciBusID: 0000:00:06.0
+totalMemory: 7.93GiB freeMemory: 7.82GiB
+2023-03-04 17:01:05.533117: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2023-03-04 17:01:05.883567: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-03-04 17:01:05.883650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2023-03-04 17:01:05.883665: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2023-03-04 17:01:05.883826: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7558 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1)
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+{'0': 97, '1': 98}
+[0 1 1 1 0 0 0 0 1 1]
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/biLSTM.reconstructed.txt -model ../data/trained_models/xor40/biLSTM.hdf5 -model_name biLSTM -input_file_prefix ../data/compressed/xor40/biLSTM.compressed -batch_size 1000"
+	User time (seconds): 397.32
+	System time (seconds): 20.31
+	Percent of CPU this job got: 104%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:39.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1736868
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1
+	Minor (reclaiming a frame) page faults: 363739
+	Voluntary context switches: 829357
+	Involuntary context switches: 1154
+	Swaps: 0
+	File system inputs: 256
+	File system outputs: 27552
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

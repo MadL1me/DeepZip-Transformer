@@ -1,3 +1,4 @@
+from tensorflow.keras.optimizers import Adam
 from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
@@ -9,7 +10,7 @@ from keras.callbacks import ModelCheckpoint, EarlyStopping
 # from matplotlib import pyplot
 import keras
 from sklearn.preprocessing import OneHotEncoder
-from keras.layers.normalization import BatchNormalization
+from keras.layers import BatchNormalization
 import tensorflow as tf
 import numpy as np
 import argparse
@@ -18,7 +19,7 @@ from keras.callbacks import CSVLogger
 
 import models
 
-tf.set_random_seed(42)
+tf.random.set_seed(42)
 np.random.seed(0)
 
 parser = argparse.ArgumentParser()
@@ -70,7 +71,7 @@ def generate_single_output_data(file_path,batch_size,time_steps):
         
 def fit_model(X, Y, bs, nb_epoch, model):
         y = Y
-        optim = keras.optimizers.Adam(lr=1e-3, beta_1=0.9, beta_2=0.999, epsilon=1e-8, decay=0, amsgrad=False)
+        optim = Adam(lr=1e-3, beta_1=0.9, beta_2=0.999, epsilon=1e-8, decay=0, amsgrad=False)
         model.compile(loss=loss_fn, optimizer=optim)
         checkpoint = ModelCheckpoint(arguments.name, monitor='loss', verbose=1, save_best_only=True, mode='min', save_weights_only=True)
         csv_logger = CSVLogger(arguments.log_file, append=True, separator=';')

@@ -1,0 +1,102 @@
+Starting training ...
+0;1.000052734879108
+1;1.000031581401709
+2;1.000031501997769
+3;1.0000322147365368
+Starting Compression ...
+2023-03-05 15:56:44.251921: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-05 15:56:44.410111: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-05 15:56:44.410781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: NVIDIA GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.759
+pciBusID: 0000:00:06.0
+totalMemory: 7.93GiB freeMemory: 7.82GiB
+2023-03-05 15:56:44.410818: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2023-03-05 15:56:44.761882: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-03-05 15:56:44.761972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2023-03-05 15:56:44.761986: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2023-03-05 15:56:44.762143: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7558 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1)
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+	Command being timed: "python compressor.py -data ../data/processed_files/xor99.npy -data_params ../data/processed_files/xor99.param.json -model ../data/trained_models/xor99/LSTM_multi_big.hdf5 -model_name LSTM_multi_big -output ../data/compressed/xor99/LSTM_multi_big.compressed -batch_size 1000"
+	User time (seconds): 280.61
+	System time (seconds): 21.92
+	Percent of CPU this job got: 106%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:43.25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1850024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 429038
+	Voluntary context switches: 824724
+	Involuntary context switches: 74889
+	Swaps: 0
+	File system inputs: 520
+	File system outputs: 10472
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2023-03-05 16:01:26.260769: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-05 16:01:26.420712: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-05 16:01:26.421402: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: NVIDIA GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.759
+pciBusID: 0000:00:06.0
+totalMemory: 7.93GiB freeMemory: 7.82GiB
+2023-03-05 16:01:26.421445: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
+2023-03-05 16:01:26.802470: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-03-05 16:01:26.802557: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
+2023-03-05 16:01:26.802574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
+2023-03-05 16:01:26.802738: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7558 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1)
+Using TensorFlow backend.
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:521: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:522: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:523: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+{'0': 97, '1': 98}
+[0 1 1 1 0 0 0 0 1 1]
+	Command being timed: "python decompressor.py -output ../data/compressed/xor99/LSTM_multi_big.reconstructed.txt -model ../data/trained_models/xor99/LSTM_multi_big.hdf5 -model_name LSTM_multi_big -input_file_prefix ../data/compressed/xor99/LSTM_multi_big.compressed -batch_size 1000"
+	User time (seconds): 379.12
+	System time (seconds): 22.17
+	Percent of CPU this job got: 105%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:21.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1718712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 350164
+	Voluntary context switches: 831401
+	Involuntary context switches: 1103
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 27552
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

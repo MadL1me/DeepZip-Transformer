@@ -24,7 +24,7 @@ from keras.layers import Dense
 from keras.layers import LSTM, Flatten, CuDNNLSTM
 from keras.layers.embeddings import Embedding
 from keras.models import load_model
-from keras.layers.normalization import BatchNormalization
+from keras.layers import BatchNormalization
 import tensorflow as tf
 import numpy as np
 import argparse
@@ -66,6 +66,7 @@ def strided_app(a, L, S):  # Window len = L, Stride len/stepsize = S
 
 def predict_lstm(X, y, y_original, timesteps, bs, alphabet_size, model_name, final_step=False):
         model = getattr(models, model_name)(bs, timesteps, alphabet_size)
+        model(X)
         model.load_weights(args.model_weights_file)
         
         if not final_step:
@@ -129,7 +130,7 @@ def var_int_encode(byte_str_len, f):
 def main():
         args.temp_dir = tempfile.mkdtemp()
         args.temp_file_prefix = args.temp_dir + "/compressed"
-        tf.set_random_seed(42)
+        tf.random.set_seed(42)
         np.random.seed(0)
         series = np.load(args.sequence_npy_file)
         series = series.reshape(-1, 1)

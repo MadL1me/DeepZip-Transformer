@@ -1,6 +1,6 @@
-ARG cuda_version=9.0
-ARG cudnn_version=7
-FROM nvidia/cuda:${cuda_version}-cudnn${cudnn_version}-devel
+ARG cuda_version=11.2
+ARG cudnn_version=8.1
+FROM nvidia/cuda:11.2.0-cudnn8-devel-ubuntu18.04
 
 # Install system packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -42,9 +42,9 @@ RUN conda install -y python=${python_version} && \
     pip install --upgrade pip && \
     pip install \
       sklearn_pandas \
-      tensorflow-gpu==1.8.0 \
-      keras==2.2.2 \
-      numpy==1.16.4 && \
+      tensorflow==2.6.2 \
+      keras==2.6.0 \
+      'numpy>=1.16.4' --ignore-installed six && \
     conda install \
       bcolz \
       h5py \

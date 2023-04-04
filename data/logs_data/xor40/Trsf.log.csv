@@ -1,0 +1,1549 @@
+Starting training ...
+Starting Compression ...
+2023-03-07 09:06:30.511638: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:30.523919: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:30.524844: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:30.526225: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:06:30.527333: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:30.528275: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:30.529179: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:31.383909: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:31.384657: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:31.385326: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:31.385999: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.build(input_shape=model.layers[0].input_shape)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 2117, in input_shape
+    raise AttributeError('The layer has never been called '
+AttributeError: The layer has never been called and thus has no defined input shape.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.77
+	System time (seconds): 2.21
+	Percent of CPU this job got: 112%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1379028
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 340653
+	Voluntary context switches: 177
+	Involuntary context switches: 52
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.12
+	System time (seconds): 0.88
+	Percent of CPU this job got: 122%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 331200
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76602
+	Voluntary context switches: 27
+	Involuntary context switches: 23908
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:06:56.174236: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.183761: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.184462: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.185485: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:06:56.186595: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.187386: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.188070: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.867440: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.868179: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.868850: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:06:56.869483: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.build(input_shape=model.layers[0].input_shape)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 2117, in input_shape
+    raise AttributeError('The layer has never been called '
+AttributeError: The layer has never been called and thus has no defined input shape.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.63
+	System time (seconds): 1.66
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1377812
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 341303
+	Voluntary context switches: 160
+	Involuntary context switches: 38166
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.36
+	System time (seconds): 0.68
+	Percent of CPU this job got: 124%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 331224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76534
+	Voluntary context switches: 30
+	Involuntary context switches: 37
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:15:44.432691: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:44.442856: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:44.443808: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:44.445110: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:15:44.446100: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:44.447047: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:44.447984: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:45.222926: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:45.223706: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:45.224378: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:15:45.225037: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model(np.zeros(model.layers[0].input_shape))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 2117, in input_shape
+    raise AttributeError('The layer has never been called '
+AttributeError: The layer has never been called and thus has no defined input shape.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.83
+	System time (seconds): 1.82
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1377660
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 340360
+	Voluntary context switches: 155
+	Involuntary context switches: 50
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.35
+	System time (seconds): 0.76
+	Percent of CPU this job got: 123%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 331648
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76517
+	Voluntary context switches: 22
+	Involuntary context switches: 33
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:18:48.215199: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.225029: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.225954: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.227219: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:18:48.228222: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.229185: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.230084: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.934772: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.935544: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.936221: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:18:48.936893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model(np.zeros(1))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 383, in call
+    outputs = layer(inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/src/workspace/src/models.py", line 36, in call
+    attn_output = self.att(inputs, inputs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/src/workspace/src/attention.py", line 595, in call
+    query, key, value, attention_mask, training
+  File "/src/workspace/src/attention.py", line 526, in _compute_attention
+    attention_scores, attention_mask
+  File "/src/workspace/src/attention.py", line 491, in _masked_softmax
+    return self._softmax(attention_scores, attention_mask)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/layers/advanced_activations.py", line 347, in call
+    return backend.softmax(inputs, axis=self.axis[0])
+IndexError: tuple index out of range
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 7.36
+	System time (seconds): 1.93
+	Percent of CPU this job got: 108%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1658268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 389765
+	Voluntary context switches: 229
+	Involuntary context switches: 20006
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 312
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.30
+	System time (seconds): 0.79
+	Percent of CPU this job got: 122%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 331620
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76524
+	Voluntary context switches: 29
+	Involuntary context switches: 15379
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:19:34.216522: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.226085: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.226793: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.227830: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:19:34.229038: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.229833: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.230510: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.907255: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.908002: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.908698: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:19:34.909336: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model(np.zeros(1))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 383, in call
+    outputs = layer(inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/src/workspace/src/models.py", line 36, in call
+    attn_output = self.att(inputs, inputs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/src/workspace/src/attention.py", line 595, in call
+    query, key, value, attention_mask, training
+  File "/src/workspace/src/attention.py", line 526, in _compute_attention
+    attention_scores, attention_mask
+  File "/src/workspace/src/attention.py", line 491, in _masked_softmax
+    return self._softmax(attention_scores, attention_mask)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/layers/advanced_activations.py", line 347, in call
+    return backend.softmax(inputs, axis=self.axis[0])
+IndexError: tuple index out of range
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 7.42
+	System time (seconds): 1.73
+	Percent of CPU this job got: 109%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1657568
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 389592
+	Voluntary context switches: 209
+	Involuntary context switches: 57
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 304
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.23
+	System time (seconds): 0.82
+	Percent of CPU this job got: 123%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 331180
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76480
+	Voluntary context switches: 25
+	Involuntary context switches: 33
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+  File "compressor.py", line 70
+    model(np.zeros(1))
+                     ^
+TabError: inconsistent use of tabs and spaces in indentation
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 0.02
+	System time (seconds): 0.01
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.03
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8780
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1121
+	Voluntary context switches: 1
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.39
+	System time (seconds): 0.73
+	Percent of CPU this job got: 123%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 331656
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76584
+	Voluntary context switches: 31
+	Involuntary context switches: 30
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:23:31.892821: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:31.902698: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:31.903664: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:31.904933: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:23:31.905992: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:31.906944: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:31.907865: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:32.653136: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:32.653905: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:32.654585: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:23:32.655241: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 204, in <module>
+    main()
+  File "compressor.py", line 166, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    print(model.summary())
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/training.py", line 2521, in summary
+    raise ValueError('This model has not yet been built. '
+ValueError: This model has not yet been built. Build the model first by calling `build()` or calling `fit()` with some data, or specify an `input_shape` argument in the first layer(s) for automatic build.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.63
+	System time (seconds): 1.89
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1380616
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 339569
+	Voluntary context switches: 182
+	Involuntary context switches: 48
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.37
+	System time (seconds): 0.72
+	Percent of CPU this job got: 123%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 330620
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76525
+	Voluntary context switches: 25
+	Involuntary context switches: 25
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:28:00.031479: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.044042: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.045051: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.046381: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:28:00.047604: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.048563: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.049464: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.790873: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.791654: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.792328: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:28:00.792937: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 204, in <module>
+    main()
+  File "compressor.py", line 166, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    print(model.summary())
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/training.py", line 2521, in summary
+    raise ValueError('This model has not yet been built. '
+ValueError: This model has not yet been built. Build the model first by calling `build()` or calling `fit()` with some data, or specify an `input_shape` argument in the first layer(s) for automatic build.
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 5.00
+	System time (seconds): 1.81
+	Percent of CPU this job got: 112%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1376484
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 340132
+	Voluntary context switches: 193
+	Involuntary context switches: 46
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.56
+	System time (seconds): 0.76
+	Percent of CPU this job got: 121%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 331288
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76531
+	Voluntary context switches: 31
+	Involuntary context switches: 36
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:29:31.505017: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:31.514935: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:31.515886: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:31.517217: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:29:31.518335: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:31.519315: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:31.520210: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:32.225416: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:32.226182: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:32.226862: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:32.227544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.build(np.zeros(alphabet_size))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 341, in build
+    self._build_graph_network_for_inferred_shape(input_shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/training/tracking/base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 282, in _build_graph_network_for_inferred_shape
+    name=self.layers[0].name + '_input')
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 383, in Input
+    input_layer = InputLayer(**input_layer_config)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 201, in __init__
+    ragged=ragged)
+  File "/opt/conda/lib/python3.6/site-packages/keras/backend.py", line 1316, in placeholder
+    shape=shape, dtype=dtype, name=name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_spec.py", line 51, in __init__
+    self._shape = tensor_shape.TensorShape(shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in __init__
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in <listcomp>
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 209, in __init__
+    .format(value, type(value))), None)
+  File "<string>", line 3, in raise_from
+TypeError: Dimension value must be integer or None or have an __index__ method, got value '0.0' with type '<class 'numpy.float64'>'
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.75
+	System time (seconds): 1.70
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1380772
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 339802
+	Voluntary context switches: 185
+	Involuntary context switches: 43
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.18
+	System time (seconds): 0.76
+	Percent of CPU this job got: 122%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 331312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76525
+	Voluntary context switches: 27
+	Involuntary context switches: 44547
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:29:54.907607: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:54.917359: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:54.918299: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:54.919589: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:29:54.920556: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:54.921496: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:54.922411: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:55.624661: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:55.625408: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:55.626090: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:29:55.626732: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.build(np.zeros(alphabet_size))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 341, in build
+    self._build_graph_network_for_inferred_shape(input_shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/training/tracking/base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 282, in _build_graph_network_for_inferred_shape
+    name=self.layers[0].name + '_input')
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 383, in Input
+    input_layer = InputLayer(**input_layer_config)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 201, in __init__
+    ragged=ragged)
+  File "/opt/conda/lib/python3.6/site-packages/keras/backend.py", line 1316, in placeholder
+    shape=shape, dtype=dtype, name=name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_spec.py", line 51, in __init__
+    self._shape = tensor_shape.TensorShape(shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in __init__
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in <listcomp>
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 209, in __init__
+    .format(value, type(value))), None)
+  File "<string>", line 3, in raise_from
+TypeError: Dimension value must be integer or None or have an __index__ method, got value '0.0' with type '<class 'numpy.float64'>'
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.69
+	System time (seconds): 1.70
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.62
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1377196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 339678
+	Voluntary context switches: 168
+	Involuntary context switches: 56
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 154, in main
+    f = open(args.input_file_prefix+'.combined','rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../data/compressed/xor40/Trsf.compressed.combined'
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.31
+	System time (seconds): 0.74
+	Percent of CPU this job got: 123%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 330980
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 76598
+	Voluntary context switches: 31
+	Involuntary context switches: 37
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 09:31:58.133668: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.143699: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.144626: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.145936: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:31:58.146783: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.147731: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.148635: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.855873: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.856622: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.857301: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:31:58.857921: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+2023-03-07 09:32:03.235190: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 666.98
+	System time (seconds): 45.44
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:28.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1779252
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 595274
+	Voluntary context switches: 712318
+	Involuntary context switches: 73077
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 10800
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2023-03-07 09:43:25.741660: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:25.757174: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:25.757876: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:25.758913: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 09:43:25.760065: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:25.760809: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:25.761497: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:26.617232: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:26.618011: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:26.618666: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 09:43:26.619362: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 173, in main
+    series[:l] = predict_lstm(l, timesteps, batch_size, alphabet_size, args.model_name)
+  File "decompressor.py", line 77, in predict_lstm
+    model(np.zeros(model.layers[0].input_shape))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 2117, in input_shape
+    raise AttributeError('The layer has never been called '
+AttributeError: The layer has never been called and thus has no defined input shape.
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 3.93
+	System time (seconds): 1.54
+	Percent of CPU this job got: 116%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1172456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 234506
+	Voluntary context switches: 165
+	Involuntary context switches: 60
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8016
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 10:47:45.148161: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:45.160500: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:45.161427: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:45.162804: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 10:47:45.163815: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:45.164692: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:45.165630: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:46.024745: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:46.025494: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:46.026176: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:47:46.026782: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+2023-03-07 10:47:50.529652: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 676.46
+	System time (seconds): 46.09
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:38.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1778852
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 594731
+	Voluntary context switches: 713123
+	Involuntary context switches: 54131
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 10800
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2023-03-07 10:59:22.287364: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:22.302341: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:22.303047: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:22.304170: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 10:59:22.305219: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:22.305939: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:22.306625: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:23.162685: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:23.163474: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:23.164152: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 10:59:23.164754: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "decompressor.py", line 185, in <module>
+    main()
+  File "decompressor.py", line 173, in main
+    series[:l] = predict_lstm(l, timesteps, batch_size, alphabet_size, args.model_name)
+  File "decompressor.py", line 77, in predict_lstm
+    model(np.zeros(alphabet_size, dtype=int))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 383, in call
+    outputs = layer(inputs, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/src/workspace/src/models.py", line 36, in call
+    attn_output = self.att(inputs, inputs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/src/workspace/src/attention.py", line 595, in call
+    query, key, value, attention_mask, training
+  File "/src/workspace/src/attention.py", line 526, in _compute_attention
+    attention_scores, attention_mask
+  File "/src/workspace/src/attention.py", line 491, in _masked_softmax
+    return self._softmax(attention_scores, attention_mask)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/layers/advanced_activations.py", line 347, in call
+    return backend.softmax(inputs, axis=self.axis[0])
+IndexError: tuple index out of range
+Command exited with non-zero status 1
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 6.68
+	System time (seconds): 1.74
+	Percent of CPU this job got: 110%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.65
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1448604
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 283579
+	Voluntary context switches: 230
+	Involuntary context switches: 49
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8304
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+Starting training ...
+Starting Compression ...
+2023-03-07 11:28:00.783312: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:00.793261: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:00.794216: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:00.795594: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:28:00.796597: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:00.797542: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:00.798479: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:01.595315: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:01.596068: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:01.596761: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:01.597367: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.build(np.zeros((bs, timesteps), dtype=int))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 341, in build
+    self._build_graph_network_for_inferred_shape(input_shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/training/tracking/base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 282, in _build_graph_network_for_inferred_shape
+    name=self.layers[0].name + '_input')
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 383, in Input
+    input_layer = InputLayer(**input_layer_config)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 201, in __init__
+    ragged=ragged)
+  File "/opt/conda/lib/python3.6/site-packages/keras/backend.py", line 1316, in placeholder
+    shape=shape, dtype=dtype, name=name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_spec.py", line 51, in __init__
+    self._shape = tensor_shape.TensorShape(shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in __init__
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in <listcomp>
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 204, in __init__
+    self._value = int(value.__index__())
+TypeError: only integer scalar arrays can be converted to a scalar index
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.80
+	System time (seconds): 2.01
+	Percent of CPU this job got: 112%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1382508
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 341229
+	Voluntary context switches: 180
+	Involuntary context switches: 42
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+2023-03-07 11:28:05.379731: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:05.389623: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:05.390341: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:05.391374: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:28:05.392505: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:05.393344: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:05.394139: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:06.074260: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:06.075002: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:06.075713: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:06.076367: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+2023-03-07 11:28:11.417841: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Starting training ...
+Starting Compression ...
+2023-03-07 11:28:25.616746: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:25.626457: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:25.627204: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:25.628214: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:28:25.629369: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:25.630090: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:25.630775: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:26.324654: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:26.325399: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:26.326076: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:26.326719: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.build(np.zeros((bs, timesteps), dtype=int))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 341, in build
+    self._build_graph_network_for_inferred_shape(input_shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/training/tracking/base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 282, in _build_graph_network_for_inferred_shape
+    name=self.layers[0].name + '_input')
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 383, in Input
+    input_layer = InputLayer(**input_layer_config)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 201, in __init__
+    ragged=ragged)
+  File "/opt/conda/lib/python3.6/site-packages/keras/backend.py", line 1316, in placeholder
+    shape=shape, dtype=dtype, name=name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_spec.py", line 51, in __init__
+    self._shape = tensor_shape.TensorShape(shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in __init__
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in <listcomp>
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 204, in __init__
+    self._value = int(value.__index__())
+TypeError: only integer scalar arrays can be converted to a scalar index
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.81
+	System time (seconds): 1.73
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1379772
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 340127
+	Voluntary context switches: 187
+	Involuntary context switches: 57
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+2023-03-07 11:28:30.066188: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.075766: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.076468: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.077484: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:28:30.078410: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.079129: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.079792: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.765569: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.766517: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.767213: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:28:30.767849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+2023-03-07 11:28:36.086973: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Starting training ...
+Starting Compression ...
+2023-03-07 11:30:07.748166: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:07.758671: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:07.759413: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:07.760430: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:30:07.761670: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:07.762481: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:07.763192: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:08.467276: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:08.468023: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:08.468703: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:08.469336: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.build(np.zeros((bs, timesteps), dtype=(int,int)))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 341, in build
+    self._build_graph_network_for_inferred_shape(input_shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/training/tracking/base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 282, in _build_graph_network_for_inferred_shape
+    name=self.layers[0].name + '_input')
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 383, in Input
+    input_layer = InputLayer(**input_layer_config)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 201, in __init__
+    ragged=ragged)
+  File "/opt/conda/lib/python3.6/site-packages/keras/backend.py", line 1316, in placeholder
+    shape=shape, dtype=dtype, name=name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_spec.py", line 51, in __init__
+    self._shape = tensor_shape.TensorShape(shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in __init__
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in <listcomp>
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 204, in __init__
+    self._value = int(value.__index__())
+TypeError: only integer scalar arrays can be converted to a scalar index
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.71
+	System time (seconds): 1.73
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1378188
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 340212
+	Voluntary context switches: 207
+	Involuntary context switches: 50
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+2023-03-07 11:30:12.178177: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.187666: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.188369: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.189368: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:30:12.190628: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.194872: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.195576: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.873541: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.874305: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.874986: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:30:12.875658: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+2023-03-07 11:30:18.187652: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Starting training ...
+Starting Compression ...
+2023-03-07 11:35:06.463069: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:06.477232: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:06.478172: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:06.479660: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:35:06.480629: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:06.481572: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:06.482495: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:07.241526: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:07.242276: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:07.242997: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:07.243676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model.build(np.zeros((bs, timesteps)))
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 341, in build
+    self._build_graph_network_for_inferred_shape(input_shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/training/tracking/base.py", line 530, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 282, in _build_graph_network_for_inferred_shape
+    name=self.layers[0].name + '_input')
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 383, in Input
+    input_layer = InputLayer(**input_layer_config)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/input_layer.py", line 201, in __init__
+    ragged=ragged)
+  File "/opt/conda/lib/python3.6/site-packages/keras/backend.py", line 1316, in placeholder
+    shape=shape, dtype=dtype, name=name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_spec.py", line 51, in __init__
+    self._shape = tensor_shape.TensorShape(shape)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in __init__
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 765, in <listcomp>
+    self._dims = [Dimension(d) for d in dims]
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py", line 204, in __init__
+    self._value = int(value.__index__())
+TypeError: only integer scalar arrays can be converted to a scalar index
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 4.84
+	System time (seconds): 1.85
+	Percent of CPU this job got: 113%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1376532
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 340821
+	Voluntary context switches: 188
+	Involuntary context switches: 53
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+2023-03-07 11:35:10.987938: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:10.997445: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:10.998150: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:10.999199: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:35:11.000415: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:11.001130: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:11.001796: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:11.679316: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:11.680057: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:11.680742: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:35:11.681383: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+Starting training ...
+Starting Compression ...
+2023-03-07 11:48:02.551987: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:02.561967: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:02.562914: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:02.564310: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:48:02.565300: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:02.566236: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:02.567172: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:03.348322: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:03.349074: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:03.349751: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:03.350416: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+2023-03-07 11:48:05.090776: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 5119967232 exceeds 10% of free system memory.
+2023-03-07 11:48:24.100278: W tensorflow/core/common_runtime/bfc_allocator.cc:457] Allocator (GPU_0_bfc) ran out of memory trying to allocate 76.29GiB (rounded to 81919475712)requested by op ResourceGather
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2023-03-07 11:48:24.100353: I tensorflow/core/common_runtime/bfc_allocator.cc:1004] BFCAllocator dump for GPU_0_bfc
+2023-03-07 11:48:24.100372: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (256): 	Total Chunks: 27, Chunks in use: 27. 6.8KiB allocated for chunks. 6.8KiB in use in bin. 2.4KiB client-requested in use in bin.
+2023-03-07 11:48:24.100383: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100394: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (1024): 	Total Chunks: 1, Chunks in use: 1. 1.2KiB allocated for chunks. 1.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2023-03-07 11:48:24.100403: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (2048): 	Total Chunks: 1, Chunks in use: 0. 3.8KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100413: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (4096): 	Total Chunks: 3, Chunks in use: 2. 15.8KiB allocated for chunks. 8.0KiB in use in bin. 8.0KiB client-requested in use in bin.
+2023-03-07 11:48:24.100423: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (8192): 	Total Chunks: 5, Chunks in use: 5. 40.0KiB allocated for chunks. 40.0KiB in use in bin. 40.0KiB client-requested in use in bin.
+2023-03-07 11:48:24.100432: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (16384): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100441: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100450: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100460: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100473: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100483: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100491: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100498: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100506: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100515: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100523: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100531: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100539: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100546: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2023-03-07 11:48:24.100556: I tensorflow/core/common_runtime/bfc_allocator.cc:1011] Bin (268435456): 	Total Chunks: 2, Chunks in use: 1. 7.22GiB allocated for chunks. 4.77GiB in use in bin. 4.77GiB client-requested in use in bin.
+2023-03-07 11:48:24.100568: I tensorflow/core/common_runtime/bfc_allocator.cc:1027] Bin for 76.29GiB was 256.00MiB, Chunk State: 
+2023-03-07 11:48:24.100582: I tensorflow/core/common_runtime/bfc_allocator.cc:1033]   Size: 2.45GiB | Requested Size: 0B | in_use: 0 | bin_num: 20, prev:   Size: 8.0KiB | Requested Size: 8.0KiB | in_use: 1 | bin_num: -1
+2023-03-07 11:48:24.100590: I tensorflow/core/common_runtime/bfc_allocator.cc:1040] Next region of size 7751598080
+2023-03-07 11:48:24.100605: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd034000000 of size 256 next 1
+2023-03-07 11:48:24.100614: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd034000100 of size 1280 next 2
+2023-03-07 11:48:24.100621: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd034000600 of size 5119967232 next 3
+2023-03-07 11:48:24.100627: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8600 of size 256 next 4
+2023-03-07 11:48:24.100634: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8700 of size 256 next 5
+2023-03-07 11:48:24.100640: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8800 of size 256 next 6
+2023-03-07 11:48:24.100647: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8900 of size 256 next 7
+2023-03-07 11:48:24.100653: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8a00 of size 256 next 8
+2023-03-07 11:48:24.100659: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8b00 of size 256 next 9
+2023-03-07 11:48:24.100666: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8c00 of size 256 next 10
+2023-03-07 11:48:24.100672: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8d00 of size 256 next 11
+2023-03-07 11:48:24.100679: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c8e00 of size 4096 next 30
+2023-03-07 11:48:24.100685: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652c9e00 of size 4096 next 32
+2023-03-07 11:48:24.100692: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 7fd1652cae00 of size 7936 next 12
+2023-03-07 11:48:24.100699: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652ccd00 of size 8192 next 13
+2023-03-07 11:48:24.100705: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652ced00 of size 256 next 14
+2023-03-07 11:48:24.100711: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cee00 of size 256 next 17
+2023-03-07 11:48:24.100718: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cef00 of size 256 next 19
+2023-03-07 11:48:24.100724: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf000 of size 256 next 20
+2023-03-07 11:48:24.100730: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf100 of size 256 next 23
+2023-03-07 11:48:24.100750: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf200 of size 256 next 24
+2023-03-07 11:48:24.100757: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf300 of size 256 next 25
+2023-03-07 11:48:24.100763: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf400 of size 256 next 26
+2023-03-07 11:48:24.100770: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf500 of size 256 next 27
+2023-03-07 11:48:24.100776: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf600 of size 256 next 28
+2023-03-07 11:48:24.100783: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf700 of size 256 next 29
+2023-03-07 11:48:24.100789: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf800 of size 256 next 31
+2023-03-07 11:48:24.100796: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cf900 of size 256 next 33
+2023-03-07 11:48:24.100802: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cfa00 of size 256 next 34
+2023-03-07 11:48:24.100809: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cfb00 of size 256 next 35
+2023-03-07 11:48:24.100815: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cfc00 of size 256 next 36
+2023-03-07 11:48:24.100821: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cfd00 of size 256 next 37
+2023-03-07 11:48:24.100827: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652cfe00 of size 256 next 38
+2023-03-07 11:48:24.100834: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 7fd1652cff00 of size 3840 next 15
+2023-03-07 11:48:24.100840: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652d0e00 of size 8192 next 16
+2023-03-07 11:48:24.100847: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652d2e00 of size 8192 next 18
+2023-03-07 11:48:24.100853: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652d4e00 of size 8192 next 22
+2023-03-07 11:48:24.100859: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] InUse at 7fd1652d6e00 of size 8192 next 21
+2023-03-07 11:48:24.100866: I tensorflow/core/common_runtime/bfc_allocator.cc:1060] Free  at 7fd1652d8e00 of size 2631561728 next 18446744073709551615
+2023-03-07 11:48:24.100873: I tensorflow/core/common_runtime/bfc_allocator.cc:1065]      Summary of in-use Chunks by size: 
+2023-03-07 11:48:24.100881: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 27 Chunks of size 256 totalling 6.8KiB
+2023-03-07 11:48:24.100889: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 1280 totalling 1.2KiB
+2023-03-07 11:48:24.100907: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 2 Chunks of size 4096 totalling 8.0KiB
+2023-03-07 11:48:24.100916: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 5 Chunks of size 8192 totalling 40.0KiB
+2023-03-07 11:48:24.100923: I tensorflow/core/common_runtime/bfc_allocator.cc:1068] 1 Chunks of size 5119967232 totalling 4.77GiB
+2023-03-07 11:48:24.100930: I tensorflow/core/common_runtime/bfc_allocator.cc:1072] Sum Total of in-use chunks: 4.77GiB
+2023-03-07 11:48:24.100937: I tensorflow/core/common_runtime/bfc_allocator.cc:1074] total_region_allocated_bytes_: 7751598080 memory_limit_: 7751598080 available bytes: 0 curr_region_allocation_bytes_: 15503196160
+2023-03-07 11:48:24.100949: I tensorflow/core/common_runtime/bfc_allocator.cc:1080] Stats: 
+Limit:                      7751598080
+InUse:                      5120024576
+MaxInUse:                   5120028928
+NumAllocs:                          64
+MaxAllocSize:               5119967232
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2023-03-07 11:48:24.100960: W tensorflow/core/common_runtime/bfc_allocator.cc:468] *******************************************************************_________________________________
+2023-03-07 11:48:24.101031: W tensorflow/core/framework/op_kernel.cc:1692] OP_REQUIRES failed at resource_variable_ops.cc:698 : Resource exhausted: OOM when allocating tensor with shape[9999936,64,32] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+Traceback (most recent call last):
+  File "compressor.py", line 203, in <module>
+    main()
+  File "compressor.py", line 165, in main
+    predict_lstm(X, Y, Y_original, timesteps, batch_size, alphabet_size, args.model_name)
+  File "compressor.py", line 69, in predict_lstm
+    model(X)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/sequential.py", line 369, in call
+    return super(Sequential, self).call(inputs, training=training, mask=mask)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/functional.py", line 415, in call
+    inputs, training=training, mask=mask)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/functional.py", line 550, in _run_internal_graph
+    outputs = node.layer(*args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/src/workspace/src/models.py", line 53, in call
+    x = self.token_emb(x)
+  File "/opt/conda/lib/python3.6/site-packages/keras/engine/base_layer.py", line 1037, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/keras/layers/embeddings.py", line 191, in call
+    out = tf.nn.embedding_lookup(self.embeddings, inputs)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/embedding_ops.py", line 395, in embedding_lookup_v2
+    return embedding_lookup(params, ids, "div", name, max_norm=max_norm)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/embedding_ops.py", line 329, in embedding_lookup
+    transform_fn=None)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/embedding_ops.py", line 138, in _embedding_lookup_and_transform
+    array_ops.gather(params[0], ids, name=name), ids, max_norm)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py", line 549, in new_func
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/array_ops.py", line 5056, in gather
+    return params.sparse_read(indices, name=name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/resource_variable_ops.py", line 714, in sparse_read
+    self.handle, indices, dtype=self._dtype, name=name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/ops/gen_resource_variable_ops.py", line 549, in resource_gather
+    _ops.raise_from_not_ok_status(e, name)
+  File "/opt/conda/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 6941, in raise_from_not_ok_status
+    six.raise_from(core._status_to_exception(e.code, message), None)
+  File "<string>", line 3, in raise_from
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: OOM when allocating tensor with shape[9999936,64,32] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [Op:ResourceGather]
+Command exited with non-zero status 1
+	Command being timed: "python compressor.py -data ../data/processed_files/xor40.npy -data_params ../data/processed_files/xor40.param.json -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -output ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 10.16
+	System time (seconds): 7.09
+	Percent of CPU this job got: 65%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:26.47
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11377160
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1594662
+	Voluntary context switches: 467
+	Involuntary context switches: 61
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 328
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+2023-03-07 11:48:27.656083: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:27.665693: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:27.666404: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:27.667450: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-07 11:48:27.668344: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:27.669069: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:27.669739: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:28.344210: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:28.344947: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:28.345618: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-03-07 11:48:28.346242: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1510] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 7392 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:00:06.0, compute capability: 6.1
+2023-03-07 11:48:30.921855: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+{'0': 97, '1': 98}
+[0 1 1 1 0 0 0 0 1 1]
+	Command being timed: "python decompressor.py -output ../data/compressed/xor40/Trsf.reconstructed.txt -model ../data/trained_models/xor40/Trsf.hdf5 -model_name Trsf -input_file_prefix ../data/compressed/xor40/Trsf.compressed -batch_size 1000"
+	User time (seconds): 784.82
+	System time (seconds): 45.47
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 13:25.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1621156
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 508538
+	Voluntary context switches: 702802
+	Involuntary context switches: 55368
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 27856
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

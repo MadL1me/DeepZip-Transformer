@@ -42,7 +42,7 @@ do
     mkdir -p "$logs_dir/$basename" 
     echo "Starting training ..." | tee -a $log_file
     
-    python trainer.py -model_name $1 -d $f -gpu $2 -name $model_file -log_file $log_file 
+    # python trainer.py -model_name $1 -d $f -gpu $2 -name $model_file -log_file $log_file 
     
     
     # Perform Compression
